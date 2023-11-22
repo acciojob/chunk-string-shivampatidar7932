@@ -1,16 +1,17 @@
 function stringChop(str, size) {
-//   // your code here
-	let ans=[];
-let i=0;
-while(i<=str.length-1){
-	ans.push(str.slice(i,i+size));
-	i=i+1;
-}
-return ans;
-	
- }
+  let ans = [];
+  let i = 0;
 
-// Do not change the code below
+  while (i <= str.length - 1) {
+    ans.push(str.slice(i, i + size));
+    i = i + size;
+  }
+
+  return ans;
+}
+
+// Example of using the function with prompt
 const str = prompt("Enter String.");
-const size = prompt("Enter Chunk Size.");
-alert(stringChop(str, size));
+const size = parseInt(prompt("Enter Chunk Size.")); // Ensure size is treated as an integer
+const result = stringChop(str, size);
+alert(JSON.stringify(result));
