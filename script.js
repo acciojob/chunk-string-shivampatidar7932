@@ -3,7 +3,8 @@ function stringChop(str, size) {
   let i = 0;
 
   while (i <= str.length - 1) {
-    ans.push(str.slice(i, i + size));
+    // Use regular expression to remove commas and spaces from the chunk
+    ans.push(str.slice(i, i + size).replace(/[, ]/g, ''));
     i = i + size;
   }
 
