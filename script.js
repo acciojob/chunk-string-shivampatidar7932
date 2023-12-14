@@ -1,13 +1,11 @@
 function stringChop(str, size) {
-	if(str===null)return[];
+	if(str === null)return[];
   let ans = [];
   let i = 0;
 
   while (i <= str.length - 1) {
-    // Use regular expression to remove commas and spaces only when forming chunks
-    ans.push(str.slice(i, i + size));
-	  
-	  
+  
+    ans.push(str.slice(i, i + size));	  
     i = i + size;
   }
 
