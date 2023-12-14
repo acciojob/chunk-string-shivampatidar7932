@@ -1,4 +1,5 @@
 function stringChop(str, size) {
+	if(str===null)return[];
   let ans = [];
   let i = 0;
 
